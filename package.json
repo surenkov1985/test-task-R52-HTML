@@ -1,0 +1,48 @@
+{
+		"name": "test-task-r52-html",
+		"version": "1.0.0",
+		"description": "test tasc for company R52",
+		"main": "index.js",
+		"scripts": {
+				"test": "echo \"Error: no test specified\" && exit 1"
+		},
+		"repository": {
+				"type": "git",
+				"url": "git+https://github.com/surenkov1985/test-task-R52-HTML.git"
+		},
+		"author": "surenkov1985@gmail.com",
+		"license": "ISC",
+		"bugs": {
+				"url": "https://github.com/surenkov1985/test-task-R52-HTML/issues"
+		},
+		"homepage": "https://github.com/surenkov1985/test-task-R52-HTML#readme",
+		"devDependencies": {
+				"@babel/core": "^7.18.5",
+				"@babel/plugin-proposal-class-properties": "^7.17.12",
+				"@babel/polyfill": "^7.12.1",
+				"@babel/preset-env": "^7.18.2",
+				"babel-loader": "^8.2.5",
+				"copy-webpack-plugin": "^11.0.0",
+				"cross-env": "^7.0.3",
+				"css-loader": "^6.7.1",
+				"file-loader": "^6.2.0",
+				"hot-module-replacement": "^3.0.4",
+				"html-loader": "^3.1.2",
+				"html-webpack-plugin": "^5.5.0",
+				"mini-css-extract-plugin": "^2.6.1",
+				"optimize-css-assets-webpack-plugin": "^6.0.1",
+				"postcss": "^8.4.14",
+				"postcss-loader": "^7.0.0",
+				"postcss-preset-env": "^7.7.1",
+				"sass": "^1.52.3",
+				"sass-loader": "^13.0.0",
+				"terser-webpack-plugin": "^5.3.3",
+				"webpack": "^5.73.0",
+				"webpack-cli": "^4.10.0",
+				"webpack-dev-server": "^4.9.2"
+		},
+		"dependencies": {
+				"autoprefixer": "^10.4.13",
+				"es6-promise": "^4.2.8"
+		}
+}
