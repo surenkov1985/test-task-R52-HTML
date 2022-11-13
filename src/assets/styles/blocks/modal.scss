@@ -1,0 +1,136 @@
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    display: none;
+
+    &__bg {
+        width: 100%;
+        height: 100%;
+        background: rgba($color: #000000, $alpha: 0.5);
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 15px;
+    }
+
+    &__container {
+        background: #FFFFFF;
+        width: 100%;
+        max-width: 450px;
+        max-height: 95%;
+        overflow-y: auto;
+        z-index: 100;
+        border-radius: 8px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+    }
+
+    &__title {
+        font-size: 24px;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+    }
+
+    &__item {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+        margin-bottom: 10px;
+        position: relative;
+    }
+
+    &__item-title {
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    &__required {
+        font-size: 16px;
+        font-weight: 600;
+        color: #ff0000;
+    }
+
+    &__input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #bebebe;
+        border-radius: 5px;
+    }
+
+    &__item-error {
+        font-size: 12px;
+        color: #ff0000;
+        position: absolute;
+        bottom: -15px;
+    }
+
+    &__gender {
+        display: flex;
+        align-items: center;
+        column-gap: 5px;
+    }
+
+    &__gender-label {
+        display: flex;
+        align-items: center;
+        column-gap: 5px;
+        cursor: pointer;
+        font-weight: 600;
+    }
+
+    &__age {
+        display: flex;
+        align-items: center;
+        column-gap: 5px;
+        width: 200px;
+    }
+
+    &__age-btn {
+        width: 40px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+
+        &>svg {
+            width: 100%;
+        }
+
+        &:hover {
+            opacity: 0.6;
+        }
+    }
+
+    &__submit {
+        padding: 10px 15px;
+        width: 100%;
+        white-space: nowrap;
+        overflow-x: hidden;
+        text-overflow: ellipsis;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        background: #a9a9a9;
+        border-radius: 5px;
+
+        &:hover {
+            opacity: 0.6;
+        }
+    }
+}
