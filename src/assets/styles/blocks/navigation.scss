@@ -1,6 +1,5 @@
 .navigation {
     width: 300px;
-    height: 100%;
     border-right: 1px solid #bebebe;
     padding: 10px 0px;
     position: relative;
@@ -21,7 +20,8 @@
     }
 
     &__list {
-        width: 100%;
+        width: 300px;
+        border-right: 1px solid #bebebe;
         display: flex;
         flex-direction: column;
         row-gap: 10px;

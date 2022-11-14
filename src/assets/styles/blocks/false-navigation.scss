@@ -1,12 +1,14 @@
 .false-navigation {
     width: 100%;
     height: 100%;
-
+    opacity: 0;
     background: rgba(#000, 0.7);
     position: fixed;
-    top: 100px;
+    top: 0;
     left: 0;
-    display: none;
+    visibility: hidden;
+    transition: all 0.5s;
+    animation: opacityIn .1s ease-in;
 
     &__bg {
         width: 300px;
@@ -14,6 +16,9 @@
         padding: 10px 0px;
         background: #FFFFFF;
         z-index: 10;
+        position: absolute;
+        left: -300px;
+        transition: all 0.5s;
     }
 
     &__list {
@@ -61,32 +66,69 @@
         &:hover {
             background: #eee;
             text-decoration: underline;
-
         }
     }
 
     &.active {
-        display: block;
-        left: 0;
-        animation: slideIn .1s ease-in;
+        opacity: 1;
+        animation: opacityIn .2s ease-in;
+        visibility: visible;
 
         &>.false-navigation__bg {
-
-            left: 0;
             animation: slideIn .2s ease-in;
+            left: 0;
         }
-
     }
 
+    &.close {
+        animation: opacityOut .2s ease-in;
+
+        &>.false-navigation__bg {
+            animation: slideOut .2s ease-in;
+        }
+    }
+}
+
+.input-gender:focus {
+    opacity: 0.5;
 }
 
 @keyframes slideIn {
     from {
-        left: -315px;
+        left: -300px;
     }
 
     to {
         left: 0;
+    }
+}
 
+@keyframes opacityIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideOut {
+    from {
+        left: 0px;
+    }
+
+    to {
+        left: -300px;
+    }
+}
+
+@keyframes opacityOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
     }
 }

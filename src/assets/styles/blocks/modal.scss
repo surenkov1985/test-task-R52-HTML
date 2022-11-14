@@ -30,6 +30,7 @@
         display: flex;
         flex-direction: column;
         row-gap: 10px;
+        position: relative;
     }
 
     &__title {
@@ -51,6 +52,10 @@
         row-gap: 10px;
         margin-bottom: 10px;
         position: relative;
+
+        &.age {
+            display: none;
+        }
     }
 
     &__item-title {
@@ -69,13 +74,25 @@
         padding: 10px;
         border: 1px solid #bebebe;
         border-radius: 5px;
+
+        &:focus::-webkit-input-placeholder {
+            color: transparent
+        }
+
+        &:focus::-moz-placeholder {
+            color: transparent
+        }
+
+        &:focus:-ms-input-placeholder {
+            color: transparent
+        }
     }
 
     &__item-error {
         font-size: 12px;
         color: #ff0000;
         position: absolute;
-        bottom: -15px;
+        bottom: -18px;
     }
 
     &__gender {
@@ -132,5 +149,40 @@
         &:hover {
             opacity: 0.6;
         }
+
+        &:focus {
+            opacity: 0.6;
+        }
     }
+
+    &__result {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #ffffff;
+        color: #008000;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        font-size: 34px;
+        font-weight: 700;
+    }
+
+    &.active {
+        display: block;
+    }
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+input[type='number'],
+input[type="number"]:hover,
+input[type="number"]:focus {
+    appearance: none;
+    -moz-appearance: textfield;
 }

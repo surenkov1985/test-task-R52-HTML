@@ -17,27 +17,30 @@
                     <form action="" target="_self" method="post" class="modal__form">
                         <label class="modal__item">
                             <p class="modal__item-title">Email<span class="modal__required">*</span></p>
-                            <input type="email" class="modal__input" placeholder="Введите email" required>
-                            <span class="modal__item-error"></span>
+                            <input type="email" name="email" class="modal__input input-email" placeholder="Введите email" required
+                                autofocus="true">
+                            <span class="modal__item-error email-err"></span>
                         </label>
                         <label class="modal__item">
                             <p class="modal__item-title">Телефон<span class="modal__required">*</span></p>
-                            <input type="email" class="modal__input" placeholder="Введите телефон" required>
-                            <span class="modal__item-error"></span>
+                            <input type="text" name="phone" class="modal__input input-phone" placeholder="Введите телефон" required>
+                            <span class="modal__item-error phone-err"></span>
                         </label>
                         <label class="modal__item">
                             <p class="modal__item-title">Пол<span class="modal__required">*</span></p>
                             <div class="modal__gender">
-                                <label class="modal__gender-label"><input type="radio" class="modal__input" value="М"
-                                        name="gender">
+                                <label class="modal__gender-label">
+                                    <input type="radio" class="modal__input input-gender" value="М" name="gender"
+                                        tabindex="0">
                                     <span>М</span></label>
-                                <label class="modal__gender-label"><input type="radio" class="modal__input" value="Ж"
-                                        name="gender">
+                                <label class="modal__gender-label">
+                                    <input type="radio" class="modal__input input-gender" value="Ж" name="gender"
+                                        tabindex="0">
                                     <span>Ж</span></label>
                             </div>
                             <span class="modal__item-error"></span>
                         </label>
-                        <div class="modal__item">
+                        <div class="modal__item age">
                             <p class="modal__item-title">Возраст</p>
                             <div class="modal__age">
                                 <button class="modal__age-btn dec">
@@ -48,7 +51,7 @@
                                             fill-rule="nonzero" />
                                     </svg>
                                 </button>
-                                <input type="text" class="modal__input" name="age" required value="16">
+                                <input type="number" class="modal__input input-age" name="age" required value="18">
                                 <button class="modal__age-btn inc">
                                     <svg clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round"
                                         stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -58,9 +61,12 @@
                                     </svg>
                                 </button>
                             </div>
+
+                            <span class="modal__item-error age-err"></span>
                         </div>
                         <button class="modal__submit">Отправить</button>
                     </form>
+                    <div class="modal__result"></div>
                 </div>
             </div>
 
