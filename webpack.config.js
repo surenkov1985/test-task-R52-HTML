@@ -37,7 +37,7 @@ const build = {
 		maxAssetSize: 512000,
 	},
 	entry: {
-		index: ["@babel/polyfill", "./index.js"],
+		index: ["whatwg-fetch", "@babel/polyfill", "./index.js"],
 	},
 	resolve: {
 		extensions: [".js"],
